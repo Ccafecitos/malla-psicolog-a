@@ -1,28 +1,60 @@
-.color-uno {
-  background-color: #cce7f9; /* celeste pastel suave */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #d4e8f5, #ffffff);
 }
 
-.color-dos {
-  background-color: #f9dada; /* rosado pastel suave */
+h1 {
+  text-align: center;
+  margin: 20px 0;
 }
 
-.color-tres {
-  background-color: #e5f7d8; /* verde pastel suave */
+.malla {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 10px;
+  padding: 20px;
+  overflow-x: auto;
+}
+
+.semestre {
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.semestre h2 {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
 .ramo {
   border: 1px solid #ccc;
-  padding: 10px;
-  margin: 4px 0;
+  padding: 8px;
+  margin-bottom: 6px;
   border-radius: 4px;
-  font-size: 14px;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  font-size: 11px;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
   transition: all 0.3s;
+  cursor: pointer;
 }
 
 .ramo:hover {
-  transform: scale(1.02);
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  transform: scale(1.05);
+  box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+}
+
+.color-uno {
+  background-color: #d4e8f5; /* celeste pastel */
+}
+
+.color-dos {
+  background-color: #f7d6d9; /* rosado pastel */
+}
+
+.color-tres {
+  background-color: #f2f2f2; /* gris pastel */
 }
 
 .bloqueado {
@@ -32,5 +64,4 @@
 
 .aprobado {
   text-decoration: line-through;
-  opacity: 1 !important;
 }
