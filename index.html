@@ -12,117 +12,109 @@
   </header>
 
   <main class="malla-grid">
-    <!-- Años -->
-    <div class="anio">
-      <h2>Año 1</h2>
-      <div class="semestres">
-        <div class="semestre">
-          <h3>Semestre 1</h3>
-          <div class="ramo celeste" id="1" onclick="aprobar(1)">Fundamentos Neuroanatómicos y Funcionales del Sistema Nervioso</div>
-          <div class="ramo rosa" id="2" onclick="aprobar(2)">Fundamentos Socioculturales de la Psicología</div>
-          <div class="ramo gris" id="3" onclick="aprobar(3)">Procesos Psicológicos I</div>
-          <div class="ramo celeste" id="4" onclick="aprobar(4)">Taller de Habilidades Profesionales I</div>
-          <div class="ramo rosa" id="5" onclick="aprobar(5)">Introducción a la Psicología</div>
-          <div class="ramo gris" id="6" onclick="aprobar(6)">Electivo de Comunicación</div>
-        </div>
-        <div class="semestre">
-          <h3>Semestre 2</h3>
-          <div class="ramo rosa" id="7" onclick="aprobar(7)">Epistemología Aplicada a la Psicología</div>
-          <div class="ramo celeste" id="8" onclick="aprobar(8)">Introducción a la Neurociencia</div>
-        </div>
-      </div>
+    <!-- GENERAMOS LAS COLUMNAS DE SEMESTRES -->
+    <div class="grid-header">
+      <div>Semestre 1</div>
+      <div>Semestre 2</div>
+      <div>Semestre 3</div>
+      <div>Semestre 4</div>
+      <div>Semestre 5</div>
+      <div>Semestre 6</div>
+      <div>Semestre 7</div>
+      <div>Semestre 8</div>
+      <div>Semestre 9</div>
+      <div>Semestre 10</div>
     </div>
 
-    <div class="anio">
-      <h2>Año 2</h2>
-      <div class="semestres">
-        <div class="semestre">
-          <h3>Semestre 3</h3>
-          <div class="ramo gris" id="9" onclick="aprobar(9)">Procesos Psicológicos II</div>
-          <div class="ramo celeste" id="10" onclick="aprobar(10)">Taller de Habilidades Profesionales II</div>
-          <div class="ramo gris" id="11" onclick="aprobar(11)">Electivo de Comunicación</div>
-        </div>
-        <div class="semestre">
-          <h3>Semestre 4</h3>
-          <div class="ramo celeste" id="12" onclick="aprobar(12)">Neuropsicología</div>
-          <div class="ramo gris" id="13" onclick="aprobar(13)">Psicología de la Personalidad</div>
-          <div class="ramo rosa" id="14" onclick="aprobar(14)">Psicología Social</div>
-          <div class="ramo rosa" id="15" onclick="aprobar(15)">Psicología del Desarrollo I</div>
-          <div class="ramo gris" id="16" onclick="aprobar(16)">Teorías Psicológicas I</div>
-          <div class="ramo rosa" id="17" onclick="aprobar(17)">Electivo de Desarrollo del Pensamiento</div>
-        </div>
-      </div>
-    </div>
+    <!-- FILAS DE RAMOS -->
+    <div class="grid-body">
+      <!-- Generamos hasta la cantidad máxima de ramos en cualquier semestre (suponemos 7 máximo) -->
+      <!-- Cada fila es un "horario" horizontal de ramos -->
 
-    <div class="anio">
-      <h2>Año 3</h2>
-      <div class="semestres">
-        <div class="semestre">
-          <h3>Semestre 5</h3>
-          <div class="ramo gris" id="18" onclick="aprobar(18)">Evaluación Psicométrica</div>
-          <div class="ramo rosa" id="19" onclick="aprobar(19)">Intervención Psicosocial con Grupos</div>
-          <div class="ramo rosa" id="20" onclick="aprobar(20)">Introducción a la Investigación en Psicología</div>
-          <div class="ramo rosa" id="21" onclick="aprobar(21)">Psicología del Desarrollo II</div>
-          <div class="ramo gris" id="22" onclick="aprobar(22)">Teorías Psicológicas II</div>
-        </div>
-        <div class="semestre">
-          <h3>Semestre 6</h3>
-          <div class="ramo gris" id="23" onclick="aprobar(23)">Evaluación Proyectiva</div>
-          <div class="ramo rosa" id="24" onclick="aprobar(24)">Intervención Sociocomunitaria</div>
-          <div class="ramo rosa" id="25" onclick="aprobar(25)">Metodología y Análisis de Datos Cuantitativos</div>
-          <div class="ramo gris" id="26" onclick="aprobar(26)">Psicología Organizacional</div>
-          <div class="ramo gris" id="27" onclick="aprobar(27)">Teorías Psicológicas III</div>
-          <div class="ramo rosa" id="28" onclick="aprobar(28)">Electivo de Desarrollo Personal</div>
-        </div>
+      <!-- FILA 1 -->
+      <div class="row">
+        <div class="ramo celeste" id="1" onclick="aprobar(1)">Fundamentos Neuroanatómicos y Funcionales del Sistema Nervioso</div>
+        <div class="ramo rosa" id="7" onclick="aprobar(7)">Epistemología Aplicada a la Psicología</div>
+        <div class="ramo rosa" id="9" onclick="aprobar(9)">Procesos Psicológicos II</div>
+        <div class="ramo celeste" id="12" onclick="aprobar(12)">Neuropsicología</div>
+        <div class="ramo gris" id="18" onclick="aprobar(18)">Evaluación Psicométrica</div>
+        <div class="ramo celeste" id="23" onclick="aprobar(23)">Evaluación Proyectiva</div>
+        <div class="ramo celeste" id="29" onclick="aprobar(29)">Psicodiagnóstico Infanto Juvenil</div>
+        <div class="ramo celeste" id="35" onclick="aprobar(35)">Psicodiagnóstico Adulto</div>
+        <div class="ramo celeste" id="42" onclick="aprobar(42)">Intervención Clínica Adulto</div>
+        <div class="ramo rosa" id="48" onclick="aprobar(48)">Optativo de Especialidad I</div>
       </div>
-    </div>
 
-    <div class="anio">
-      <h2>Año 4</h2>
-      <div class="semestres">
-        <div class="semestre">
-          <h3>Semestre 7</h3>
-          <div class="ramo gris" id="29" onclick="aprobar(29)">Psicodiagnóstico Infanto Juvenil</div>
-          <div class="ramo gris" id="30" onclick="aprobar(30)">Intervención en Organizaciones</div>
-          <div class="ramo rosa" id="31" onclick="aprobar(31)">Metodología y Análisis de Datos Cualitativos</div>
-          <div class="ramo celeste" id="32" onclick="aprobar(32)">Psicopatología y Psicofarmacología Infanto Juvenil</div>
-          <div class="ramo gris" id="33" onclick="aprobar(33)">Teorías Psicológicas IV</div>
-          <div class="ramo rosa" id="34" onclick="aprobar(34)">Electivo de Responsabilidad Social</div>
-        </div>
-        <div class="semestre">
-          <h3>Semestre 8</h3>
-          <div class="ramo gris" id="35" onclick="aprobar(35)">Psicodiagnóstico Adulto</div>
-          <div class="ramo gris" id="36" onclick="aprobar(36)">Intervención Clínica Infanto Juvenil</div>
-          <div class="ramo rosa" id="37" onclick="aprobar(37)">Proyecto de Tesis</div>
-          <div class="ramo rosa" id="38" onclick="aprobar(38)">Psicología de la Educación</div>
-          <div class="ramo celeste" id="39" onclick="aprobar(39)">Psicopatología y Psicofarmacología Adulto</div>
-          <div class="ramo rosa" id="40" onclick="aprobar(40)">Electivo de Ética</div>
-          <div class="ramo rosa" id="41" onclick="aprobar(41)">Desempeño Ético del Psicólogo</div>
-        </div>
+      <!-- FILA 2 -->
+      <div class="row">
+        <div class="ramo rosa" id="2" onclick="aprobar(2)">Fundamentos Socioculturales de la Psicología</div>
+        <div class="ramo celeste" id="8" onclick="aprobar(8)">Introducción a la Neurociencia</div>
+        <div class="ramo rosa" id="10" onclick="aprobar(10)">Taller de Habilidades Profesionales II</div>
+        <div class="ramo rosa" id="13" onclick="aprobar(13)">Psicología de la Personalidad</div>
+        <div class="ramo rosa" id="19" onclick="aprobar(19)">Intervención Psicosocial con Grupos</div>
+        <div class="ramo rosa" id="24" onclick="aprobar(24)">Intervención Sociocomunitaria</div>
+        <div class="ramo rosa" id="30" onclick="aprobar(30)">Intervención en Organizaciones</div>
+        <div class="ramo rosa" id="36" onclick="aprobar(36)">Intervención Clínica Infanto Juvenil</div>
+        <div class="ramo rosa" id="43" onclick="aprobar(43)">Seminario de Tesis</div>
+        <div class="ramo rosa" id="49" onclick="aprobar(49)">Optativo de Especialidad II</div>
       </div>
-    </div>
 
-    <div class="anio">
-      <h2>Año 5</h2>
-      <div class="semestres">
-        <div class="semestre">
-          <h3>Semestre 9</h3>
-          <div class="ramo gris" id="42" onclick="aprobar(42)">Intervención Clínica Adulto</div>
-          <div class="ramo rosa" id="43" onclick="aprobar(43)">Seminario de Tesis</div>
-          <div class="ramo rosa" id="44" onclick="aprobar(44)">Intervención Psicoeducativa en Contextos Escolares</div>
-          <div class="ramo rosa" id="45" onclick="aprobar(45)">Psicología Jurídica</div>
-          <div class="ramo rosa" id="46" onclick="aprobar(46)">Psicología de la Salud</div>
-          <div class="ramo celeste" id="47" onclick="aprobar(47)">Práctica Avanzada I</div>
-        </div>
-        <div class="semestre">
-          <h3>Semestre 10</h3>
-          <div class="ramo rosa" id="48" onclick="aprobar(48)">Optativo de Especialidad I</div>
-          <div class="ramo rosa" id="49" onclick="aprobar(49)">Optativo de Especialidad II</div>
-          <div class="ramo gris" id="50" onclick="aprobar(50)">Práctica Avanzada II</div>
-          <div class="ramo rosa" id="51" onclick="aprobar(51)">Optativo de Especialidad III</div>
-          <div class="ramo rosa" id="52" onclick="aprobar(52)">Optativo de Especialidad IV</div>
-        </div>
+      <!-- FILA 3 -->
+      <div class="row">
+        <div class="ramo gris" id="3" onclick="aprobar(3)">Procesos Psicológicos I</div>
+        <div class="ramo gris" id="11" onclick="aprobar(11)">Electivo de Comunicación</div>
+        <div class="ramo rosa" id="14" onclick="aprobar(14)">Psicología Social</div>
+        <div class="ramo rosa" id="15" onclick="aprobar(15)">Psicología del Desarrollo I</div>
+        <div class="ramo rosa" id="20" onclick="aprobar(20)">Introducción a la Investigación en Psicología</div>
+        <div class="ramo rosa" id="25" onclick="aprobar(25)">Metodología y Análisis de Datos Cuantitativos</div>
+        <div class="ramo rosa" id="31" onclick="aprobar(31)">Metodología y Análisis de Datos Cualitativos</div>
+        <div class="ramo rosa" id="37" onclick="aprobar(37)">Proyecto de Tesis</div>
+        <div class="ramo rosa" id="44" onclick="aprobar(44)">Intervención Psicoeducativa en Contextos Escolares</div>
+        <div class="ramo rosa" id="50" onclick="aprobar(50)">Práctica Avanzada II</div>
       </div>
+
+      <!-- FILA 4 -->
+      <div class="row">
+        <div class="ramo celeste" id="4" onclick="aprobar(4)">Taller de Habilidades Profesionales I</div>
+        <div class="ramo rosa" id="16" onclick="aprobar(16)">Teorías Psicológicas I</div>
+        <div class="ramo rosa" id="21" onclick="aprobar(21)">Psicología del Desarrollo II</div>
+        <div class="ramo rosa" id="26" onclick="aprobar(26)">Psicología Organizacional</div>
+        <div class="ramo rosa" id="32" onclick="aprobar(32)">Psicopatología y Psicofarmacología Infanto Juvenil</div>
+        <div class="ramo rosa" id="38" onclick="aprobar(38)">Psicología de la Educación</div>
+        <div class="ramo rosa" id="39" onclick="aprobar(39)">Psicopatología y Psicofarmacología Adulto</div>
+        <div class="ramo rosa" id="45" onclick="aprobar(45)">Psicología Jurídica</div>
+        <div class="ramo rosa" id="46" onclick="aprobar(46)">Psicología de la Salud</div>
+        <div class="ramo rosa" id="51" onclick="aprobar(51)">Optativo de Especialidad III</div>
+      </div>
+
+      <!-- FILA 5 -->
+      <div class="row">
+        <div class="ramo rosa" id="5" onclick="aprobar(5)">Introducción a la Psicología</div>
+        <div class="ramo rosa" id="17" onclick="aprobar(17)">Electivo de Desarrollo del Pensamiento</div>
+        <div class="ramo rosa" id="22" onclick="aprobar(22)">Teorías Psicológicas II</div>
+        <div class="ramo rosa" id="27" onclick="aprobar(27)">Teorías Psicológicas III</div>
+        <div class="ramo rosa" id="33" onclick="aprobar(33)">Teorías Psicológicas IV</div>
+        <div class="ramo rosa" id="34" onclick="aprobar(34)">Electivo de Responsabilidad Social</div>
+        <div class="ramo rosa" id="40" onclick="aprobar(40)">Electivo de Ética</div>
+        <div class="ramo rosa" id="41" onclick="aprobar(41)">Desempeño Ético del Psicólogo</div>
+        <div class="ramo rosa" id="47" onclick="aprobar(47)">Práctica Avanzada I</div>
+        <div class="ramo rosa" id="52" onclick="aprobar(52)">Optativo de Especialidad IV</div>
+      </div>
+
+      <!-- FILA 6 -->
+      <div class="row">
+        <div class="ramo gris" id="6" onclick="aprobar(6)">Electivo de Comunicación</div>
+        <div class="ramo rosa"></div>
+        <div class="ramo rosa"></div>
+        <div class="ramo rosa"></div>
+        <div class="ramo rosa"></div>
+        <div class="ramo rosa"></div>
+        <div class="ramo rosa"></div>
+        <div class="ramo rosa"></div>
+        <div class="ramo rosa"></div>
+        <div class="ramo rosa"></div>
+      </div>
+
     </div>
   </main>
 
