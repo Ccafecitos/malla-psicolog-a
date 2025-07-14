@@ -1,101 +1,76 @@
-/* RESET */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  font-family: "Segoe UI", sans-serif;
-  background-color: #ffffff;
-  color: #333;
-}
-
-header {
-  background: linear-gradient(to right, #e1f5fe, #b3e5fc);
-  padding: 20px;
-  text-align: center;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: linear-gradient(to bottom, #e3f2fd, #ffffff);
 }
 
 h1 {
-  font-size: 1.8rem;
-  font-weight: normal;
+  text-align: center;
+  color: #333;
+  margin: 30px 0;
 }
 
-.malla-grid {
+.malla {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
   padding: 20px;
-  max-width: 95%;
-  margin: auto;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 
-/* HEADER GRID */
-.grid-header {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  gap: 8px;
-  margin-bottom: 12px;
+.semestre {
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 6px;
+  width: 170px;
+  min-width: 170px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
 }
 
-.grid-header div {
-  font-size: 0.9rem;
+.semestre h2 {
+  font-size: 1em;
   text-align: center;
-  padding: 8px;
-  background-color: #f0f0f0;
-  font-weight: bold;
-  border: 1px solid #ddd;
+  background: #eceff1;
+  padding: 5px;
+  margin: 0 0 10px;
+  border-radius: 4px;
 }
 
-/* BODY GRID */
-.grid-body {
-  display: grid;
-  grid-template-rows: repeat(6, auto);
-  grid-template-columns: repeat(10, 1fr);
-  gap: 8px;
-}
-
-/* RAMO BLOQUES */
 .ramo {
-  min-height: 40px;
-  font-size: 0.8rem;
+  background: #e3f2fd;
+  color: #333;
+  border-radius: 4px;
   padding: 6px;
-  text-align: center;
-  border: 1px solid #ccc;
-  opacity: 0.3;
-  pointer-events: none;
+  margin-bottom: 6px;
+  font-size: 0.9em;
   cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
-  overflow: hidden;
 }
 
-/* COLORES PASTEL SUAVES */
-.celeste {
-  background-color: #e1f5fe;
+.ramo:hover {
+  transform: scale(1.03);
 }
 
-.rosa {
-  background-color: #fde2e2;
+.bloqueado {
+  background: #eeeeee !important;
+  color: #999 !important;
+  cursor: not-allowed;
+  text-decoration: none;
+  box-shadow: none;
 }
 
-.gris {
-  background-color: #f5f5f5;
-}
-
-/* DESTRABADOS */
-.ramo.unlocked {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* TACHADO */
-.ramo.completed {
+.aprobado {
   text-decoration: line-through;
-  color: #555;
+  background: #c8e6c9 !important;
+  color: #2e7d32 !important;
 }
 
-/* HOVER */
-.ramo.unlocked:hover {
-  box-shadow: 0 0 8px rgba(0,0,0,0.2);
-  transform: scale(1.02);
+.ramo:nth-child(odd):not(.bloqueado):not(.aprobado) {
+  background: #ffcdd2;
+}
+
+.ramo:nth-child(even):not(.bloqueado):not(.aprobado) {
+  background: #bbdefb;
 }
