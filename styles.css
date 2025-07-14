@@ -1,76 +1,36 @@
-body {
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  background: linear-gradient(to bottom, #e3f2fd, #ffffff);
+.color-uno {
+  background-color: #cce7f9; /* celeste pastel suave */
 }
 
-h1 {
-  text-align: center;
-  color: #333;
-  margin: 30px 0;
+.color-dos {
+  background-color: #f9dada; /* rosado pastel suave */
 }
 
-.malla {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  padding: 20px;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-}
-
-.semestre {
-  background: #f9f9f9;
-  padding: 10px;
-  border-radius: 6px;
-  width: 170px;
-  min-width: 170px;
-  box-shadow: 0 0 4px rgba(0,0,0,0.1);
-}
-
-.semestre h2 {
-  font-size: 1em;
-  text-align: center;
-  background: #eceff1;
-  padding: 5px;
-  margin: 0 0 10px;
-  border-radius: 4px;
+.color-tres {
+  background-color: #e5f7d8; /* verde pastel suave */
 }
 
 .ramo {
-  background: #e3f2fd;
-  color: #333;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 4px 0;
   border-radius: 4px;
-  padding: 6px;
-  margin-bottom: 6px;
-  font-size: 0.9em;
-  cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
+  font-size: 14px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  transition: all 0.3s;
 }
 
 .ramo:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
 }
 
 .bloqueado {
-  background: #eeeeee !important;
-  color: #999 !important;
-  cursor: not-allowed;
-  text-decoration: none;
-  box-shadow: none;
+  opacity: 0.4;
+  pointer-events: none;
 }
 
 .aprobado {
   text-decoration: line-through;
-  background: #c8e6c9 !important;
-  color: #2e7d32 !important;
-}
-
-.ramo:nth-child(odd):not(.bloqueado):not(.aprobado) {
-  background: #ffcdd2;
-}
-
-.ramo:nth-child(even):not(.bloqueado):not(.aprobado) {
-  background: #bbdefb;
+  opacity: 1 !important;
 }
