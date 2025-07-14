@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Datos REALES de ramos y sus prerrequisitos según tu malla
   const ramos = [
     // Semestre 1
     { nombre: 'Fundamentos Neuroanatómicos y Funcionales del Sistema Nervioso', prerequisitos: [] },
@@ -110,44 +109,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function actualizarBloqueos() {
     ramos.forEach(ramo => {
-      const div = document.querySelector(`.ramo:not(.aprobado):contains("${ramo.nombre}")`) || document.querySelector(`.ramo.aprobado:contains("${ramo.nombre}")`);
-      if (!div) return;
-
-      if (ramo.prerequisitos.length === 0 || ramo.prerequisitos.every(pr => aprobados.has(pr))) {
-        div.classList.remove('bloqueado');
-      } else {
-        div.classList.add('bloqueado');
-      }
+      document.querySelectorAll('.ramo').forEach(div => {
+        const texto = div.textContent.trim();
+        if (texto === ramo.nombre) {
+          if (ramo.prerequisitos.every(pr => aprobados.has(pr))) {
+            div.classList.remove('bloqueado');
+          } else if (ramo.prerequisitos.length > 0) {
+            div.classList.add('bloqueado');
+          } else {
+            div.classList.remove('bloqueado');
+          }
+        }
+      });
     });
   }
 
   document.querySelectorAll('.ramo').forEach(div => {
     div.addEventListener('click', () => {
-      const nombre = div.textContent.trim();
-
       if (div.classList.contains('bloqueado')) return;
-
       div.classList.toggle('aprobado');
+      const texto = div.textContent.trim();
 
       if (div.classList.contains('aprobado')) {
-        aprobados.add(nombre);
+        aprobados.add(texto);
       } else {
-        aprobados.delete(nombre);
+        aprobados.delete(texto);
       }
-
       actualizarBloqueos();
     });
   });
 
   actualizarBloqueos();
 });
-
-// Polyfill para :contains en querySelector (no existe en CSS)
-(function(){
-  if (!Element.prototype.matchesSelectorContains) {
-    Element.prototype.matchesSelectorContains = function(selector, text) {
-      const el = this.querySelector(selector);
-      return el && el.textContent.includes(text);
-    };
-  }
-})();
