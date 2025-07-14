@@ -1,4 +1,4 @@
-// Mapa de prerrequisitos según tu malla
+// Prerrequisitos reales de tu malla
 const prerrequisitos = {
   8: [1],
   9: [3],
@@ -24,24 +24,22 @@ const prerrequisitos = {
   50: [47]
 };
 
-// Set que guarda los ramos que ya aprobaste
 const aprobados = new Set();
 
-// Al cargar la página, desbloqueamos los ramos que no tienen requisitos
+// Al cargar la página
 window.onload = () => {
   actualizarEstado();
 };
 
-// Lógica para aprobar un ramo
 function aprobar(id) {
   aprobados.add(id);
   actualizarEstado();
 }
 
-// Función que revisa qué ramos deben estar bloqueados o desbloqueados
 function actualizarEstado() {
   document.querySelectorAll('.ramo').forEach(div => {
     const id = parseInt(div.id);
+    if (!id) return; // Ignorar bloques vacíos
 
     if (aprobados.has(id)) {
       div.classList.add('completed');
